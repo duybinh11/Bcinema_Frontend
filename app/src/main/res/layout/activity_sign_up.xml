@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SignUpActivity">
+    <LinearLayout
+        android:id="@+id/body"
+        android:padding="15dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textColor="@color/colorbtn"
+            style="@style/title3"
+            android:text="BCinema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:textColorHint="@color/white"
+            app:cursorColor="@color/colorbtn"
+            app:hintTextColor="@color/white"
+            android:layout_marginTop="40dp"
+            android:hint="Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:text="Zxc123@gmail"
+                android:id="@+id/email"
+                style="@style/regular1"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:textColorHint="@color/white"
+            app:cursorColor="@color/colorbtn"
+            app:hintTextColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:text="Zxc123"
+                android:id="@+id/pass"
+                style="@style/regular1"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:textColorHint="@color/white"
+            app:cursorColor="@color/colorbtn"
+            app:hintTextColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:hint="Username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:text="Zxc123"
+                android:id="@+id/username"
+                style="@style/regular1"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:textColorHint="@color/white"
+            app:cursorColor="@color/colorbtn"
+            app:hintTextColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:hint="Tuổi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:text="20"
+                android:id="@+id/old"
+                style="@style/regular1"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:textColorHint="@color/white"
+            app:cursorColor="@color/colorbtn"
+            app:hintTextColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:hint="Số điện thoại"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:text="098532102"
+                android:id="@+id/phone"
+                style="@style/regular1"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:textColorHint="@color/white"
+            app:cursorColor="@color/colorbtn"
+            app:hintTextColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:hint="Địa chỉ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:text="Hue"
+                android:id="@+id/address"
+                style="@style/regular1"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnRegist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn"
+            android:text="Đăng ký" />
+    </LinearLayout>
+    <ProgressBar
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminateTint="@color/colorbtn"
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

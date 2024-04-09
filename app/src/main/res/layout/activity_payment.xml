@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".activity.PaymentActivity"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_margin="15dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+                <LinearLayout
+                    android:padding="10dp"
+                    android:background="@color/colorCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="start"
+                        android:src="@drawable/film_now"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@color/colorbtn"
+                            style="@style/title1"
+                            android:text="Avengers: Infinity War"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TableLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TableRow>
+                                <ImageView
+                                    android:paddingBottom="2dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/video"/>
+                                <TextView
+                                    android:layout_marginLeft="-2dp"
+                                    android:textSize="12sp"
+                                    style="@style/textSub"
+                                    android:layout_gravity="center"
+                                    android:text="Acton, adventure, sci-fi"/>
+                            </TableRow>
+                            <TableRow android:layout_marginTop="5dp">
+                                <ImageView
+                                    android:paddingBottom="2dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/location"/>
+                                <TextView
+                                    android:layout_marginLeft="2dp"
+                                    android:textSize="12sp"
+                                    style="@style/textSub"
+                                    android:layout_gravity="center"
+                                    android:text="Vincom Ocean Park CGV"/>
+                            </TableRow>
+                            <TableRow android:layout_marginTop="5dp">
+                                <ImageView
+                                    android:paddingBottom="2dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/clock"/>
+                                <TextView
+                                    android:textSize="12sp"
+                                    style="@style/textSub"
+                                    android:text=" 10.12.2022 • 14:15"/>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/psb"
+                    android:layout_alignParentStart="true"
+                    android:text="Ghế"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/seatNumber"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    style="@style/regular1"
+                    android:layout_alignParentEnd="true"
+                    android:text="F10,F11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/psb"
+                    android:layout_alignParentStart="true"
+                    android:text="Tổng tiền"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/money"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorbtn"
+                    style="@style/regular1"
+                    android:layout_alignParentEnd="true"
+                    android:text="200.000 VND"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/btn"
+            android:fontFamily="@font/psb"
+            android:text="Thanh toán"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <ProgressBar
+        android:visibility="invisible"
+        android:indeterminateTint="@color/colorbtn"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
+

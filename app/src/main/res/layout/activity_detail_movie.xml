@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetailMovieActivity">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <androidx.cardview.widget.CardView
+
+           app:cardCornerRadius="20dp"
+           android:layout_marginTop="150dp"
+           android:layout_marginHorizontal="20dp"
+           android:backgroundTint="@color/colorCard"
+           android:layout_width="match_parent"
+           android:layout_height="200dp">
+           <LinearLayout
+               android:orientation="vertical"
+               android:padding="15dp"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <TextView
+                   android:maxLines="1"
+                   android:ellipsize="end"
+                   android:id="@+id/name"
+                   style="@style/title1"
+                   android:text="Avengers: Infinity War"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+                   <TextView
+                       android:id="@+id/time"
+                       android:textColor="@color/colorText"
+                       android:text="2h29m"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+                   <TextView
+                       android:textColor="@color/colorText"
+                       android:text=" * "
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+                   <TextView
+                       android:id="@+id/day"
+                       android:textColor="@color/colorText"
+                       android:text="10.01.2004"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_marginTop="35dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+                   <TextView
+                       style="@style/title1"
+                       android:text="Review"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+                   <ImageView
+                       android:layout_marginLeft="10dp"
+                       android:layout_gravity="center"
+                       android:src="@drawable/star"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+                   <TextView
+                       android:id="@+id/rate"
+                       android:layout_gravity="center"
+                       android:textSize="17sp"
+                       style="@style/title1"
+                       android:text="4.8"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+                   <TextView
+                       android:id="@+id/amountWatch"
+                       android:textColor="@color/colorText"
+                       android:textSize="12sp"
+                       style="@style/regular1"
+                       android:text="(9999)"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+               </LinearLayout>
+               <ImageView
+                   android:id="@+id/btnTrailer"
+                   android:layout_marginTop="10dp"
+                   android:src="@drawable/btntrailer"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+       </androidx.cardview.widget.CardView>
+
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@color/black">
+
+           <ImageView
+               android:id="@+id/avt"
+               android:layout_width="match_parent"
+               android:layout_height="250dp"
+               android:scaleType="centerCrop"
+               android:src="@drawable/filmshow" />
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_marginHorizontal="10dp"
+               android:layout_marginTop="120dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <TableLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <TableRow>
+                       <TextView
+                           style="@style/textSub"
+                           android:text="Thể loại phim : "
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                       <TextView
+                           android:id="@+id/type"
+                           style="@style/textSub"
+                           android:text="Action, adventure, sci-fi"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                   </TableRow>
+                   <TableRow android:paddingTop="5dp">
+                       <TextView
+                           style="@style/textSub"
+                           android:text="Độ tuổi"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                       <TextView
+                           android:id="@+id/old"
+                           style="@style/textSub"
+                           android:text="18+"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                   </TableRow>
+                   <TableRow android:paddingTop="5dp">
+                       <TextView
+                           style="@style/textSub"
+                           android:text="Ngôn ngữ"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                       <TextView
+                           android:id="@+id/language"
+                           style="@style/textSub"
+                           android:text="Enlgish"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                   </TableRow>
+               </TableLayout>
+
+               <TextView
+                   android:layout_marginTop="10dp"
+                   style="@style/title1"
+                   android:text="Câu chuyện"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/story"
+                   android:maxLines="2"
+                   android:ellipsize="end"
+                   android:textSize="13sp"
+                   style="@style/regular1"
+                   android:text="As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:textColor="@color/colorbtn"
+                   android:text="Xem thêm"
+                   android:maxLines="2"
+                   android:ellipsize="end"
+                   android:textSize="13sp"
+                   style="@style/title1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+
+       </LinearLayout>
+
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/btnBooking"
+           android:layout_marginBottom="10dp"
+           android:layout_marginHorizontal="10dp"
+           android:fontFamily="@font/psb"
+           android:textColor="@color/white"
+           android:text="Đặc vé"
+           android:background="@drawable/btn"
+           android:layout_alignParentBottom="true"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+   </RelativeLayout>
+
+</RelativeLayout>
