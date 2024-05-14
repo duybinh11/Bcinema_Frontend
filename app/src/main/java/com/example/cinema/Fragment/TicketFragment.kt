@@ -1,10 +1,12 @@
 package com.example.cinema.Fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,8 +31,14 @@ class TicketFragment : Fragment() {
         initViewModel()
         viewModel.getTicketAll()
         liveTicketAll()
-
+        refreshData()
         return binding.root
+    }
+
+    private fun refreshData() {
+        binding.reload.setOnRefreshListener {
+            viewModel.getTicketAll()
+        }
     }
 
     private fun liveTicketAll() {
@@ -41,10 +49,14 @@ class TicketFragment : Fragment() {
                 }
                 is Resource.Success ->{
                     notLoading()
+                    binding.reload.isRefreshing = false
+                    binding.body.visibility = View.VISIBLE
                     binding.rccv.adapter = TicketAdapter(it.data)
                     binding.rccv.layoutManager = LinearLayoutManager(requireContext())
                 }
                 is Resource.Empty ->{
+                    binding.reload.isRefreshing = false
+                    notLoading()
                     isEmptyTicket()
                 }
                 is Resource.Error ->{
@@ -58,7 +70,6 @@ class TicketFragment : Fragment() {
         binding.apply {
             body.visibility = View.INVISIBLE
             empty.visibility = View.VISIBLE
-            rccv.visibility = View.INVISIBLE
         }
     }
 

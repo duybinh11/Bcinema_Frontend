@@ -40,6 +40,7 @@ class LoginActivity : AppCompatActivity() {
                 }
                 is Resource.Success ->{
                     val intent = Intent(this, HomeActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                     startActivity(intent)
                     notLoading()
                 }

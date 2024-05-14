@@ -29,7 +29,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
-                android:text="Zxc123@gmail"
                 android:id="@+id/email"
                 style="@style/regular1"
                 android:textSize="14sp"
@@ -45,8 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
-                android:text="Zxc123"
                 android:id="@+id/pass"
+                android:inputType="textPassword"
                 style="@style/regular1"
                 android:textSize="14sp"
                 android:layout_width="match_parent"
@@ -61,7 +60,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
-                android:text="Zxc123"
                 android:id="@+id/username"
                 style="@style/regular1"
                 android:textSize="14sp"
@@ -77,9 +75,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
-                android:text="20"
                 android:id="@+id/old"
                 style="@style/regular1"
+                android:inputType="number"
                 android:textSize="14sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -93,7 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
-                android:text="098532102"
+                android:inputType="number"
                 android:id="@+id/phone"
                 style="@style/regular1"
                 android:textSize="14sp"
@@ -109,7 +107,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
-                android:text="Hue"
                 android:id="@+id/address"
                 style="@style/regular1"
                 android:textSize="14sp"

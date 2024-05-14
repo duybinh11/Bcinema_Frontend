@@ -61,7 +61,6 @@ class BookingFragment : Fragment() {
                     Toast.makeText(requireContext(),"Erorr",Toast.LENGTH_LONG).show()
                 }
                 is Resource.Empty ->{
-                    Toast.makeText(requireContext(),"Empty",Toast.LENGTH_SHORT).show()
                     isEmptyShowTime()
                 }
             }

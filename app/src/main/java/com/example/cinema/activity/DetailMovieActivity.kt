@@ -31,8 +31,6 @@ class DetailMovieActivity : AppCompatActivity() {
             intent.putExtra("moveToSecondFragment", true)
             startActivity(intent)
             finish()
-//             val intent = Intent(this, SeatActivity::class.java)
-//             startActivity(intent)
         }
     }
 

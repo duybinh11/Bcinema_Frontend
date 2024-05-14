@@ -8,23 +8,23 @@
         android:id="@+id/nav_home"/>
     <item
         app:showAsAction="always"
-        android:icon="@drawable/tickte"
+        android:icon="@drawable/event"
         android:title="Đặt vé"
         android:id="@+id/nav_booking"/>
     <item
         app:showAsAction="always"
-        android:icon="@drawable/tickte"
+        android:icon="@drawable/ticket"
         android:title="Vé"
         android:id="@+id/nav_ticket"/>
 
     <item
         app:showAsAction="always"
-        android:icon="@drawable/nav_movie"
+        android:icon="@drawable/video"
         android:title="Phim"
         android:id="@+id/nav_movie"/>
     <item
         app:showAsAction="always"
-        android:icon="@drawable/profile"
+        android:icon="@drawable/user"
         android:title="Profile"
-        android:id="@+id/nav_profile"/>
+        android:id="@+id/nav_user"/>
 </menu>

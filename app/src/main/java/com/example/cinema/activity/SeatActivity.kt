@@ -94,6 +94,7 @@ class SeatActivity : AppCompatActivity() {
                 val intent = Intent(this, PaymentActivity::class.java)
                 intent.putExtra("list_seat",viewModel.stateCost.value?.toIntArray())
                 intent.putExtra("id_show_time",idShowTime)
+                finish()
                 startActivity(intent)
             }else{
                 Toast.makeText(this,"Vui lòng chọn ghế",Toast.LENGTH_LONG).show()

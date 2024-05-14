@@ -44,8 +44,9 @@ class PaymentActivity : AppCompatActivity() {
                     notLoading()
                     val intent = Intent(this, MyTickerActivity::class.java)
                     intent.putExtra("id_ticket",it.data)
-                    Toast.makeText(this,"id_ticket ${it.data}",Toast.LENGTH_SHORT).show()
                     startActivity(intent)
+                    finish();
+
                 }
                 is Resource.Error ->{
                     notLoading()

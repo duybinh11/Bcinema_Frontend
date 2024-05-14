@@ -1,5 +1,6 @@
 package com.example.cinema.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -32,8 +33,7 @@ class MyTickerActivity : AppCompatActivity() {
         getDataIntent()
         viewModel.getATicket(idTicket)
         liveTicket()
-
-
+        ClickBack()
     }
 
     private fun liveTicket() {
@@ -74,7 +74,6 @@ class MyTickerActivity : AppCompatActivity() {
 
     private fun getDataIntent() {
         idTicket = intent.getIntExtra("id_ticket",0)
-        Toast.makeText(this,"id_ticket ${idTicket} = okk",Toast.LENGTH_SHORT).show()
     }
 
 
@@ -108,6 +107,11 @@ class MyTickerActivity : AppCompatActivity() {
             seatStrings.add(seat)
         }
         return seatStrings
+    }
+    private fun ClickBack(){
+        binding.iconBack.setOnClickListener {
+            finish();
+        }
     }
 
 }

@@ -32,7 +32,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
-                android:text="duybinh@gmail.com"
                 style="@style/regular1"
                 android:textSize="14sp"
                 android:id="@+id/email"
@@ -49,11 +48,10 @@
             app:hintTextColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <com.google.android.material.textfield.TextInputEditText
-                android:text="zxc123"
                 android:id="@+id/password"
                 style="@style/regular1"
+                android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14sp" />
@@ -64,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@drawable/btn"
-            android:text="Đăng ký" />
+            android:text="Đăng nhập" />
     </LinearLayout>
 
     <ProgressBar

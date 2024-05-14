@@ -33,7 +33,7 @@ class HomeActivity : AppCompatActivity() {
                 R.id.nav_booking -> binding.viewpager.currentItem = 1
                 R.id.nav_ticket -> binding.viewpager.currentItem = 2
                 R.id.nav_movie -> binding.viewpager.currentItem = 3
-                R.id.nav_profile -> binding.viewpager.currentItem = 4
+                R.id.nav_user -> binding.viewpager.currentItem = 4
             }
             true
         }

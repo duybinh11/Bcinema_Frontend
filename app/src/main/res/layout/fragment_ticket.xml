@@ -1,41 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:background="@color/black"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Fragment.TicketFragment">
-    <LinearLayout
-        android:id="@+id/body"
+
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/reload"
+        tools:context=".Fragment.TicketFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:id="@+id/load"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rccv"
-                android:layout_margin="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                <LinearLayout
+                    android:id="@+id/body"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rccv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="20dp" />
+                </LinearLayout>
 
-    </LinearLayout>
-    <TextView
-        android:id="@+id/empty"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        style="@style/title1"
-        android:text="Chưa đặt vé"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <ProgressBar
-        android:visibility="invisible"
-        android:indeterminateTint="@color/colorbtn"
-        android:id="@+id/loading"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</RelativeLayout>
+                <TextView
+                    android:id="@+id/empty"
+                    style="@style/title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Chưa đặt vé" />
+
+                <ProgressBar
+                    android:id="@+id/loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:indeterminateTint="@color/colorbtn"
+                    android:visibility="invisible" />
+        </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
